@@ -1,1 +1,1 @@
-www.NoahTech.health
+NoahTech.health
