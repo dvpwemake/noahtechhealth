@@ -1,0 +1,343 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title data-i18n="title">MoCA Cognitive Assessment Test App</title>
+    
+    <link rel="icon" href="img/favicon.png">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        /* Language Switcher Styling */
+        .language-switcher {
+            position: relative;
+            display: inline-block;
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+        
+        .language-button {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .language-button:hover {
+            border-color: #1a76d1;
+            color: #1a76d1;
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 150px;
+            display: none;
+            z-index: 999;
+            margin-top: 5px;
+        }
+
+        .language-dropdown.active {
+            display: block;
+        }
+
+        .language-option {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            border-bottom: 1px solid #f5f5f5;
+            transition: background 0.2s;
+        }
+
+        .language-option:last-child {
+            border-bottom: none;
+        }
+
+        .language-option:hover, .language-option.active {
+            background-color: #f8f9fa;
+            color: #1a76d1;
+        }
+
+        /* Feature Cards Styling */
+        .single-feature-card {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .single-feature-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            border-color: transparent;
+        }
+
+        .feature-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: #e6e6e6;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+
+        .single-feature-card:hover .feature-number {
+            color: #1a76d1;
+        }
+
+        /* Screenshot Styling */
+        .screenshot-wrap {
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot-wrap:hover {
+            transform: translateY(-10px);
+        }
+
+        .screenshot-wrap img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Hero Adjustments */
+        .hero-area-custom {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+            <div class="indicator"> 
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo.jpg" alt="Noah Tech"></a>
+                            </div>
+                            <div class="mobile-nav"></div>
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <div class="main-menu">
+                                <nav class="navigation" aria-label="Primary navigation">
+                                    <ul class="nav menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="cognit.html">Brain Aging Prevention</a></li>
+                                        <li class="active"><a href="MCItest.html">MCI Test</a></li>
+                                        <li><a href="trial.html">Clinical Trial</a></li>
+                                        <li><a href="https://calendly.com/noahtech-info/30min">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <div class="get-quote">
+                                <a href="https://calendly.com/noahtech-info/30min" class="btn">Book Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-area-custom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hero-content">
+                        <h1 data-i18n="heroTitle" style="font-size: 2.8rem; font-weight: 700; color: #2C2D3F; margin-bottom: 25px;">
+                            MoCA Cognitive Assessment Test
+                        </h1>
+                        <p data-i18n="heroSubtitle" style="font-size: 1.2rem; color: #888; margin-bottom: 0; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">
+                            Professional cognitive function assessment tool providing accurate testing assistance for doctors
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 data-i18n="sectionFeatures">Core Features</h2>
+                        <img src="img/section-img.png" alt="#" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card">
+                        <div class="feature-number">01</div>
+                        <h4 data-i18n="feature1Title" style="margin-bottom: 15px; font-weight: 600;">Patient Profile Management</h4>
+                        <p data-i18n="feature1Desc">Convenient patient information management system that helps doctors quickly create and manage patient profiles, recording complete medical information.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card">
+                        <div class="feature-number">02</div>
+                        <h4 data-i18n="feature2Title" style="margin-bottom: 15px; font-weight: 600;">MoCA Test Assistance</h4>
+                        <p data-i18n="feature2Desc">Professional test flow guidance to assist doctors in conducting standardized MoCA cognitive assessment tests on patients, ensuring test accuracy and consistency.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card">
+                        <div class="feature-number">03</div>
+                        <h4 data-i18n="feature3Title" style="margin-bottom: 15px; font-weight: 600;">Automatic Scoring & Reports</h4>
+                        <p data-i18n="feature3Desc">Automatically calculate test result scores based on operations and generate detailed assessment reports, providing scientific basis for clinical diagnosis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card">
+                        <div class="feature-number">04</div>
+                        <h4 data-i18n="feature4Title" style="margin-bottom: 15px; font-weight: 600;">Free Test Opportunities</h4>
+                        <p data-i18n="feature4Desc">Provides two free test opportunities for each user, enabling more people to conveniently conduct cognitive function assessments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio section" id="screenshots" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 data-i18n="sectionScreenshots">Interface Showcase</h2>
+                        <img src="img/section-img.png" alt="#" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="screenshot-wrap">
+                        <img src="img/FRONT-thumb.png" alt="MoCA App Main Interface" data-i18n-alt="heroImageAlt">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="screenshot-wrap">
+                        <img src="img/TEST1-thumb.png" alt="Test Interface 1" data-i18n-alt="screenshot1Alt">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="screenshot-wrap">
+                        <img src="img/TEST2-thumb.png" alt="Test Interface 2" data-i18n-alt="screenshot2Alt">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="screenshot-wrap">
+                        <img src="img/TEST3-thumb.png" alt="Test Interface 3" data-i18n-alt="screenshot3Alt">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-content">
+                            <p style="margin-bottom: 10px;" data-i18n="footerText">MoCA Cognitive Assessment Test App - Professional Medical Assistant Tool</p>
+                            <p>Copyright 2024–<span id="copyright-year"></span> | All Rights Reserved by 
+                                <a href="https://www.noahtech.life">Noah Tech, Corp.</a> • 
+                                <a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms of Use</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/colors.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/slicknav.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/niceselect.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/staller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+</body>
+</html>
