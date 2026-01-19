@@ -1,13 +1,20 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 <head>
-    <!-- Same head structure -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Contact & Resources | Noah Tech</title>
-    <link rel="icon" href="img/favicon.png">
+    <meta name="description" content="Contact Noah Tech for brain health consultations, MCI testing, and clinical trial participation. Download our service guide.">
+    <meta name="keywords" content="Noah Tech, brain health, MCI test, clinical trial, cognitive enhancement, contact">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -20,12 +27,52 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Custom Styles -->
+    <style>
+        .breadcrumbs {
+            background: linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
+            padding: 80px 0 60px;
+        }
+        .breadcrumbs h2 {
+            color: #0b2a69;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .pdf-preview-container {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(2,6,23,.08);
+        }
+        .btn-primary {
+            background: #0b2a69;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background: #0a2356;
+        }
+    </style>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader"> ... </div>
 
-    <!-- Updated Header -->
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+            <div class="indicator"> 
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Area (identical to trial.html) -->
     <header class="header">
         <div class="header-inner">
             <div class="container">
@@ -33,9 +80,11 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-12">
                             <div class="logo">
-                                <a href="index.html"><img src="img/logo.jpg" alt="Noah Tech"></a>
+                                <a href="index.html"><img src="img/logo.jpg" alt="NoahTech Logo"></a>
                             </div>
-                            <div class="col-lg-7 col-md-9 col-12">
+                            <div class="mobile-nav"></div>
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
                             <div class="main-menu">
                                 <nav class="navigation" aria-label="Primary navigation">
                                     <ul class="nav menu">
@@ -58,8 +107,9 @@
             </div>
         </div>
     </header>
+    <!-- End Header Area -->
 
-    <!-- Your existing PDF download section -->
+    <!-- Breadcrumbs / PDF Section -->
     <div class="breadcrumbs overlay">
         <div class="container">
             <div class="bread-inner">
@@ -68,10 +118,12 @@
                         <h2>Download Our Service Guide</h2>
                     </div>
                 </div>
-                <div class="row mt-4">
-                    <div class="col-12 text-center">
-                        <iframe src="NoahTech MSCGuid.pdf" width="100%" height="600px" style="border: 1px solid #ddd;" title="PDF Preview"></iframe>
-                        <div class="mt-3">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="pdf-preview-container">
+                            <iframe src="NoahTech MSCGuid.pdf" width="100%" height="700px" style="border: none;" title="NoahTech Service Guide Preview"></iframe>
+                        </div>
+                        <div class="text-center mt-4">
                             <a href="NoahTech MSCGuid.pdf" download class="btn btn-primary">Download PDF Guide</a>
                         </div>
                     </div>
@@ -80,16 +132,33 @@
         </div>
     </div>
 
-    <!-- Updated Footer -->
+    <!-- Call to Action -->
+    <section class="call-action overlay" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="content">
+                        <h2>Ready to Take the Next Step in Brain Health?</h2>
+                        <p>Schedule a consultation or ask us any questions.</p>
+                        <div class="button">
+                            <a href="https://calendly.com/noahtech-info/30min" class="btn">Schedule a Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
     <footer id="footer" class="footer">
         <div class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-12">
                         <div class="copyright-content">
                             <p>Copyright 2024–<span id="copyright-year"></span> | All Rights Reserved by 
-<a href="https://www.noahtech.life">Noah Tech, Corp.</a> • 
-<a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms of Use</a></p>
+                            <a href="https://www.noahtech.life">Noah Tech, Corp.</a> • 
+                            <a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms of Use</a></p>
                         </div>
                     </div>
                 </div>
@@ -97,10 +166,29 @@
         </div>
     </footer>
 
-    <!-- Scripts + Dynamic Year -->
+    <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
-    <!-- ... all other scripts ... -->
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/colors.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/slicknav.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/niceselect.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/steller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Dynamic Copyright Year -->
     <script>
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
