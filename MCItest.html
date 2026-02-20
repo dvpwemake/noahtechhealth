@@ -148,6 +148,41 @@
             background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
             text-align: center;
         }
+
+        /* Install CTA Button */
+        .app-install-cta a {
+            display: inline-flex;
+            align-items: center;
+            background: #000;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 600;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+            transition: all 0.3s ease;
+            gap: 14px;
+        }
+
+        .app-install-cta a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+            background: #111;
+        }
+
+        .app-install-cta img {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            border: 1px solid #333;
+        }
+
+        .app-install-cta p {
+            margin-top: 14px;
+            font-size: 0.95rem;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -207,9 +242,21 @@
                         <h1 data-i18n="heroTitle" style="font-size: 2.8rem; font-weight: 700; color: #2C2D3F; margin-bottom: 25px;">
                             MoCA Cognitive Assessment Test
                         </h1>
-                        <p data-i18n="heroSubtitle" style="font-size: 1.2rem; color: #888; margin-bottom: 0; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        <p data-i18n="heroSubtitle" style="font-size: 1.2rem; color: #888; margin-bottom: 30px; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto;">
                             Professional cognitive function assessment tool providing accurate testing assistance for doctors
                         </p>
+
+                        <!-- Install Now button with App Store link and icon -->
+                        <div class="app-install-cta" style="margin: 40px auto; text-align: center;">
+                            <a href="https://apps.apple.com/us/app/moca-assessment/id6756805471" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5a/92/38/5a9238c8-77f1-3b5a-fbda-507dc3b931be/AppIcon-0-0-1x_U007epad-0-1-85-220.png/120x120bb.png" 
+                                     alt="MoCA Assessment App Icon">
+                                Install Now on the App Store
+                            </a>
+                            <p>Available on iPhone, iPad & Mac • Free with in-app purchases</p>
+                        </div>
                     </div>
                 </div>
             </div>
