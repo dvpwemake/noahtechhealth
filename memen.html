@@ -1,0 +1,439 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Memory Enhancement App | NoahTech</title>
+    <meta name="description" content="Memory Enhancement by NoahTech — AI-powered memory training app to strengthen recall, sharpen focus, and build long-term brain resilience.">
+    <meta name="keywords" content="memory enhancement, brain training, cognitive fitness, memory app, NoahTech, recall, focus">
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Memory Enhancement Brand Colors */
+        :root {
+            --me-dark: #2E2E2E;
+            --me-blue: #007BFF;
+            --me-orange: #FF8C00;
+            --me-light: #F5F5FF;
+            --me-info: #00BFFF;
+        }
+
+        .single-feature-card {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .single-feature-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            border-color: transparent;
+        }
+        .feature-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: #e6e6e6;
+            margin-bottom: 15px;
+            line-height: 1;
+        }
+        .single-feature-card:hover .feature-number {
+            color: var(--me-blue);
+        }
+        .screenshot-wrap {
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .screenshot-wrap:hover { transform: translateY(-10px); }
+        .screenshot-wrap img { width: 100%; display: block; }
+        .hero-area-custom {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--me-light) 0%, #fff 100%);
+            text-align: center;
+        }
+        .app-install-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--me-dark);
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .app-install-cta a:hover {
+            background: var(--me-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,123,255,0.3);
+        }
+        .app-install-cta img {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+        }
+        .app-install-cta p {
+            color: #888;
+            margin-top: 12px;
+            font-size: 0.9rem;
+        }
+        .me-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--me-blue), var(--me-info));
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .me-logo-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .me-logo-brand img {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+        }
+        .me-logo-brand .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--me-dark);
+            line-height: 1.1;
+            text-align: left;
+        }
+        .me-logo-brand .brand-name span {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--me-blue);
+        }
+        .section-title h2 { color: var(--me-dark); }
+        .me-stat-bar {
+            background: linear-gradient(90deg, var(--me-blue) 0%, var(--me-orange) 100%);
+            height: 4px;
+            border-radius: 2px;
+            margin: 0 auto 40px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+            <div class="indicator">
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo.jpg" alt="NoahTech Logo"></a>
+                            </div>
+                            <div class="mobile-nav"></div>
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <div class="main-menu">
+                                <nav class="navigation" aria-label="Primary navigation">
+                                    <ul class="nav menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="cognit.html">Brain Aging Prevention</a></li>
+                                        <li class="active has-dropdown">
+                                            <a href="#">MCI Tools <i class="fa fa-caret-down" style="font-size:11px;margin-left:3px;"></i></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="MCItest.html">MoCA Assessment</a></li>
+                                                <li><a href="memen.html">Memory Enhancement</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="trial.html">Clinical Trial</a></li>
+                                        <li><a href="https://calendly.com/noahtech-info/30min">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <div class="get-quote">
+                                <a href="https://calendly.com/noahtech-info/30min" class="btn">Book Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-area-custom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="hero-content">
+                        <!-- Brand Logo -->
+                        <div class="me-logo-brand">
+                            <img src="img/Memory_Enhancement_logo.png" alt="Memory Enhancement Logo" onerror="this.style.display='none'">
+                            <div class="brand-name">
+                                Memory<span>Enhancement</span>
+                            </div>
+                        </div>
+
+                        <div class="me-badge">
+                            <i class="fa fa-brain"></i> AI-Powered Cognitive Training
+                        </div>
+
+                        <h1 style="font-size:2.8rem;font-weight:700;color:#2E2E2E;margin-bottom:25px;">
+                            Train Your Memory.<br>Strengthen Your Mind.
+                        </h1>
+                        <p style="font-size:1.2rem;color:#888;margin-bottom:30px;line-height:1.6;max-width:800px;margin-left:auto;margin-right:auto;">
+                            Science-backed memory training designed to enhance recall, sharpen focus, and build lasting brain resilience — for anyone seeking a proactive edge on cognitive health.
+                        </p>
+
+                        <div class="app-install-cta" style="margin:40px auto;text-align:center;">
+                            <a href="https://apps.apple.com/us/app/memory-enhancement/id6741833726"
+                               target="_blank" rel="noopener noreferrer">
+                                <img src="img/Memory_Enhancement_logo.png"
+                                     alt="Memory Enhancement App Icon"
+                                     onerror="this.style.background='#007BFF';this.style.padding='8px';this.style.borderRadius='14px';">
+                                Install Now on the App Store
+                            </a>
+                            <p>Available on iPhone, iPad &amp; Mac &bull; Free with in-app purchases</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Core Features</h2>
+                        <img src="img/section-img.png" alt="#" onerror="this.style.display='none'">
+                        <div class="me-stat-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card">
+                        <div class="feature-number">01</div>
+                        <h4 style="margin-bottom:15px;font-weight:600;">Adaptive Memory Training</h4>
+                        <p>Personalized exercises that adapt to your performance level, targeting specific memory domains — visual, verbal, spatial, and working memory — for maximum effectiveness.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card">
+                        <div class="feature-number">02</div>
+                        <h4 style="margin-bottom:15px;font-weight:600;">Daily Training Programs</h4>
+                        <p>Structured daily sessions based on spaced repetition and cognitive load theory, designed by neuroscientists to build lasting memory improvements over time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card">
+                        <div class="feature-number">03</div>
+                        <h4 style="margin-bottom:15px;font-weight:600;">Progress Analytics</h4>
+                        <p>Detailed performance tracking and cognitive progress reports that visualize improvements across memory categories, helping users stay motivated and on track.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card">
+                        <div class="feature-number">04</div>
+                        <h4 style="margin-bottom:15px;font-weight:600;">MCI Early Detection</h4>
+                        <p>Integrated cognitive screening tools that flag early signs of memory decline, empowering users and caregivers to seek clinical evaluation at the right time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interface Showcase -->
+    <section class="portfolio section" id="screenshots" style="background-color:#f9f9f9;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Interface Showcase</h2>
+                        <img src="img/section-img.png" alt="#" onerror="this.style.display='none'">
+                        <div class="me-stat-bar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="screenshot-wrap">
+                        <img src="img/1.jpeg" alt="Memory Enhancement App Interface 1" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="screenshot-wrap">
+                        <img src="img/2.jpeg" alt="Memory Enhancement App Interface 2" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="screenshot-wrap">
+                        <img src="img/3.jpeg" alt="Memory Enhancement App Interface 3" onerror="this.parentElement.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Memory Enhancement -->
+    <section class="features section" id="why">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Why Memory Enhancement?</h2>
+                        <img src="img/section-img.png" alt="#" onerror="this.style.display='none'">
+                        <p>Backed by neuroscience. Built for real life.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card" style="border-top:3px solid #007BFF;">
+                        <div style="font-size:2.5rem;margin-bottom:15px;">&#129504;</div>
+                        <h4 style="font-weight:600;margin-bottom:12px;">Science-Backed Methods</h4>
+                        <p>Our training protocols are grounded in peer-reviewed neuroscience research on neuroplasticity, spaced repetition, and dual n-back training.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card" style="border-top:3px solid #FF8C00;">
+                        <div style="font-size:2.5rem;margin-bottom:15px;">&#9201;</div>
+                        <h4 style="font-weight:600;margin-bottom:12px;">Just 10 Minutes a Day</h4>
+                        <p>Clinically designed micro-sessions fit any schedule. Consistent short training sessions outperform infrequent long ones for memory consolidation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="single-feature-card" style="border-top:3px solid #00BFFF;">
+                        <div style="font-size:2.5rem;margin-bottom:15px;">&#128200;</div>
+                        <h4 style="font-weight:600;margin-bottom:12px;">Measurable Results</h4>
+                        <p>Users report measurable improvements in recall speed, working memory capacity, and focus within 4–6 weeks of consistent daily training.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background:linear-gradient(135deg,#2E2E2E 0%,#1a1a2e 100%);padding:80px 0;text-align:center;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 style="color:#fff;font-size:2.2rem;font-weight:700;margin-bottom:20px;font-family:'Montserrat',sans-serif;">
+                        Start Your Memory Journey Today
+                    </h2>
+                    <p style="color:#aaa;font-size:1.1rem;margin-bottom:35px;">
+                        Join thousands of users strengthening their minds with Memory Enhancement by NoahTech.
+                    </p>
+                    <a href="https://apps.apple.com/us/app/memory-enhancement/id6741833726"
+                       target="_blank" rel="noopener noreferrer"
+                       style="display:inline-flex;align-items:center;gap:12px;background:#007BFF;color:#fff;padding:16px 35px;border-radius:12px;font-size:1rem;font-weight:700;text-decoration:none;font-family:'Montserrat',sans-serif;transition:all 0.3s;">
+                        <i class="fa fa-apple" style="font-size:1.4rem;"></i>
+                        Download on the App Store
+                    </a>
+                    <div style="margin-top:30px;">
+                        <a href="MCItest.html" style="color:#007BFF;text-decoration:none;font-size:0.95rem;">
+                            Also check out our MoCA Assessment tool &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="copyright-content">
+                            <p>Copyright 2024&ndash;<span id="copyright-year"></span> | All Rights Reserved by
+                            <a href="https://www.noahtech.life">Noah Tech, Corp.</a> &bull;
+                            <a href="privacy.html">Privacy Policy</a> &bull; <a href="terms.html">Terms of Use</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/colors.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/slicknav.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/niceselect.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/steller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        // Dropdown toggle for mobile
+        document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.closest('.has-dropdown').classList.toggle('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
