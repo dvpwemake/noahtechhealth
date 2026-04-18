@@ -4190,3 +4190,81 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+
+/*===============================
+    MCI Tools Dropdown Navigation
+================================*/
+.nav.menu > li.has-dropdown {
+    position: relative;
+}
+
+.nav.menu > li.has-dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav.menu > li.has-dropdown .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    z-index: 9999;
+    padding: 8px 0;
+    list-style: none;
+    margin: 0;
+    border-top: 3px solid #1a76d1;
+}
+
+.nav.menu > li.has-dropdown:hover .sub-menu,
+.nav.menu > li.has-dropdown.open .sub-menu {
+    display: block;
+}
+
+.nav.menu > li.has-dropdown .sub-menu li {
+    display: block;
+    float: none;
+}
+
+.nav.menu > li.has-dropdown .sub-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #2C2D3F;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.nav.menu > li.has-dropdown .sub-menu li:last-child a {
+    border-bottom: none;
+}
+
+.nav.menu > li.has-dropdown .sub-menu li a:hover {
+    background: #f0f7ff;
+    color: #1a76d1;
+    padding-left: 26px;
+}
+
+/* Mobile dropdown */
+@media only screen and (max-width: 768px) {
+    .nav.menu > li.has-dropdown .sub-menu {
+        position: static;
+        box-shadow: none;
+        border-top: none;
+        border-left: 3px solid #1a76d1;
+        border-radius: 0;
+        background: #f9f9f9;
+        margin-left: 10px;
+        padding: 0;
+    }
+    .nav.menu > li.has-dropdown .sub-menu li a {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
