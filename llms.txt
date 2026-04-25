@@ -1,0 +1,27 @@
+# Noah Tech
+
+> Noah Tech, Corp. is a Nevada-based clinical-stage neuroscience company developing regenerative medicine and cognitive-enhancement therapies. We provide high-potency mesenchymal stem cell (MSC) therapy, certified MoCA cognitive screening, and operate an active clinical trial (NCT07214974) for mild cognitive impairment (MCI).
+
+Noah Tech offers a full-spectrum, one-stop regenerative medicine program: advanced MSC therapy, certified MoCA cognitive assessment, an investigational Brain-Computer Interface + stem cell clinical trial, and a companion MCI screening iOS/iPadOS/macOS application. Our medical complex includes a stem cell lab, imaging center, general hospital, and luxury patient suites.
+
+## Core pages
+
+- [Home — Stem Cell Therapy & Regenerative Medicine](https://www.noahtech.life/): Company overview, clinical services, medical-complex facilities, and contact details.
+- [Brain Aging Prevention — Certified MoCA](https://www.noahtech.life/cognit.html): Noah Tech is a Certified MoCA member (Rater ID USLYNWA710861409-01) providing standardized cognitive screening for early MCI detection.
+- [Clinical Trial NCT07214974](https://www.noahtech.life/trial.html): Randomized, double-blind, placebo-controlled pre-IND study investigating a cognitive-enhancement intervention in adults aged 55–75 with MCI or age-related cognitive decline.
+- [MCI Test — MoCA Assessment App](https://www.noahtech.life/MCItest.html): Professional iOS/iPadOS/macOS application that guides clinicians through standardized MoCA administration, scoring, and reporting.
+- [Memory Enhancement — Brain Training App](https://www.noahtech.life/memen.html): Clinically-informed picture-recognition memory-training app for individuals with MCI, available in eight languages.
+- [Contact & Service Guide](https://www.noahtech.life/contact.html): Downloadable MSC service guide (PDF) and scheduling links.
+
+## Legal
+
+- [Privacy Policy](https://www.noahtech.life/privacy.html): HIPAA, GDPR, and CCPA disclosures covering website use, clinical-trial participation, and patient rights.
+- [Terms of Use](https://www.noahtech.life/terms.html): Nevada-governed terms, medical disclaimer, intellectual-property and arbitration provisions.
+
+## Contact
+
+- General: info@noahtech.life
+- Privacy: privacy@noahtech.life
+- Legal: legal@noahtech.life
+- Booking: https://calendly.com/noahtech-info/30min
+- Address: 930 S 4th St Ste 209, Las Vegas, NV 89101, USA

@@ -1,0 +1,47 @@
+# Noah Tech — robots.txt
+# https://www.noahtech.life/
+
+User-agent: *
+Allow: /
+
+# Internal pages — not intended for public indexing
+Disallow: /training.html
+Disallow: /SaMD.html
+
+# Welcome AI crawlers (explicitly allowed to index public content)
+User-agent: GPTBot
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: CCBot
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+Sitemap: https://www.noahtech.life/sitemap.xml
