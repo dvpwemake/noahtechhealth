@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoahTech Business Development Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+
+        :root {
+            --gold: #C9A227;
+            --gold-light: #E8D48A;
+            --cream: #FDF8F0;
+            --deep: #1A2A3A;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #1A2A3A;
+        }
+
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.02;
+            letter-spacing: -0.03em;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0.985);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .slide.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+            z-index: 10;
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 3rem;
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .full-graphic {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .full-graphic::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, rgba(26,42,58,0.78), rgba(26,42,58,0.52));
+            z-index: 1;
+        }
+
+        .gold {
+            color: #C9A227;
+        }
+
+        .section-label {
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #C9A227;
+        }
+
+        .footer-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 46px;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid #EDE4D3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2.5rem;
+            font-size: 11px;
+            color: #4B5563;
+            z-index: 20;
+        }
+
+        .nav-arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 50;
+            width: 44px;
+            height: 44px;
+            border-radius: 9999px;
+            background: rgba(255,255,255,0.92);
+            border: 1px solid #EDE4D3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #1A2A3A;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-arrow:hover {
+            background: #C9A227;
+            color: white;
+            border-color: #C9A227;
+        }
+
+        .nav-arrow.left { left: 20px; }
+        .nav-arrow.right { right: 20px; }
+
+        .stat {
+            font-size: 4rem;
+            line-height: 0.95;
+            font-weight: 700;
+            color: #C9A227;
+            font-feature-settings: "tnum";
+        }
+
+        .key-point {
+            font-size: 17px;
+            line-height: 1.45;
+        }
+
+        .frame {
+            background: white;
+            border: 1px solid #EDE4D3;
+            border-radius: 16px;
+            padding: 20px 24px;
+            transition: all 0.3s ease;
+        }
+
+        .frame:hover {
+            border-color: #C9A227;
+            box-shadow: 0 10px 15px -3px rgb(201 162 39 / 0.1);
+        }
+
+        .video-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #C9A227;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .video-button:hover {
+            background: #A37E2E;
+            transform: translateY(-1px);
+        }
+
+        /* Redline Animation for Opportunity Slide */
+        .redline-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            height: 220px;
+            display: flex;
+            align-items: center;
+        }
+
+        .mci-zone, .dementia-zone {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mci-zone {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px solid #4ade80;
+        }
+
+        .dementia-zone {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 2px solid #f87171;
+        }
+
+        .red-divider {
+            width: 6px;
+            height: 85%;
+            background: repeating-linear-gradient(
+                180deg,
+                #dc2626,
+                #dc2626 8px,
+                #fee2e2 8px,
+                #fee2e2 16px
+            );
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+            animation: pulse-red 2s infinite ease-in-out;
+        }
+
+        .red-divider::before {
+            content: "THE POINT OF NO RETURN";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            white-space: nowrap;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #dc2626;
+            background: white;
+            padding: 2px 10px;
+            border-radius: 9999px;
+            box-shadow: 0 0 10px rgba(220,38,38,0.4);
+        }
+
+        @keyframes pulse-red {
+            0%, 100% { box-shadow: 0 0 15px rgba(220, 38, 38, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(220, 38, 38, 0.9); }
+        }
+
+        .symbol {
+            position: absolute;
+            z-index: 20;
+            font-weight: 900;
+            line-height: 1;
+            animation: flash 1.2s infinite ease-in-out;
+        }
+
+        .mci-symbol {
+            color: #16a34a;
+            font-size: 72px;
+            left: 38%;
+            top: 42%;
+        }
+
+        .dementia-symbol {
+            color: #dc2626;
+            font-size: 72px;
+            right: 38%;
+            top: 42%;
+            animation: flash 0.9s infinite ease-in-out;
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.85); }
+        }
+
+        .status-text {
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .mci-zone .status-text { color: #166534; }
+        .dementia-zone .status-text { color: #991b1b; }
+    </style>
+</head>
+<body class="bg-[#1A2A3A] text-[#1A2A3A] overflow-hidden">
+
+    <div id="keyboard-hint" class="fixed top-6 right-6 z-50 bg-white/90 text-[#1A2A3A] text-xs px-4 py-2 rounded-2xl border border-[#EDE4D3] hidden md:block">
+        Use <span class="font-semibold">← →</span> or <span class="font-semibold">Space</span>
+    </div>
+
+    <div id="deck" class="relative w-screen h-screen">
+
+        <!-- SLIDE 1: Title / Cover -->
+        <div class="slide active full-graphic" 
+             style="background-image: linear-gradient(to bottom, rgba(26,42,58,0.35) 0%, rgba(26,42,58,0.75) 55%, rgba(26,42,58,0.92) 100%), url('img/Celebrity.jpg'); background-position: center 28%; background-size: cover;">
+            
+            <div class="slide-content" style="align-items: center; justify-content: center; padding: 0 4rem;">
+                <div class="max-w-5xl text-white text-center relative z-10">
+                    
+                    <!-- Logo -->
+                    <div class="mb-8 flex justify-center">
+                        <img src="img/logo2.png" alt="NoahTech" class="h-10 opacity-95">
+                    </div>
+
+                    <!-- Main Title - Massive & Impactful -->
+                    <h1 class="heading-serif text-white text-[68px] md:text-[82px] leading-[0.9] tracking-[-4px] font-bold mb-4">
+                        STOP DEMENTIA<br>AT MCI
+                    </h1>
+
+                    <!-- Thin gold accent line -->
+                    <div class="w-16 h-px bg-[#C9A227] mx-auto mb-8"></div>
+
+                    <!-- Supporting line - Clear & Simple -->
+                    <p class="text-2xl md:text-3xl text-white/90 tracking-tight max-w-2xl mx-auto">
+                        The window is narrow.<br>The opportunity is now.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Bible verse - Elegant & Minimal at bottom -->
+            <div class="absolute bottom-16 left-1/2 -translate-x-1/2 text-center text-white/60 text-sm tracking-wider z-10">
+                <span class="italic">"Be transformed by the renewing of your mind."</span><br>
+                <span class="text-xs mt-1 block">— Romans 12:2</span>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-bar text-xs px-8">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">1 / 10</div>
+                <div class="text-right">info@noahtech.health • 650 489 5808</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: Dementia has NO cure! (with Video) -->
+        <div class="slide" style="background: #FFFBF5;">
+            <div class="slide-content">
+                <div class="max-w-5xl w-full">
+                    <div class="section-label">Challenge</div>
+                    <h2 class="heading-serif text-[46px] md:text-[54px] leading-[0.92] tracking-[-2.3px] font-bold mt-1 text-red-700">
+                        Dementia has NO cure!
+                    </h2>
+
+                    <div class="mt-8 grid md:grid-cols-2 gap-x-10 gap-y-5">
+                        <div class="frame">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-exclamation-triangle text-[#C9A227] mt-1"></i>
+                                <div class="key-point"><span class="font-semibold">Dementia can strike anyone</span> — regardless of wealth, fame, or status.</div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-exclamation-triangle text-[#C9A227] mt-1"></i>
+                                <div class="key-point"><span class="font-semibold">Lifetime risk:</span> 42%.</div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-exclamation-triangle text-[#C9A227] mt-1"></i>
+                                <div class="key-point"><span class="font-semibold">No cure</span> once dementia develops.</div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-check-circle text-emerald-600 mt-1"></i>
+                                <div class="key-point">MCI, the precursor of dementia, <span class="font-semibold">can be stopped</span>.</div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-exclamation-triangle text-[#C9A227] mt-1"></i>
+                                <div class="key-point"><span class="font-semibold">75%</span> of MCI cases lead to incapacitation.</div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-exclamation-triangle text-[#C9A227] mt-1"></i>
+                                <div class="key-point">Dementia patients have a <span class="font-semibold">7.5× higher mortality rate</span> than their peers.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video now on Slide 2 -->
+                    <div class="mt-7">
+                        <a href="https://youtu.be/EW9inhcWDAQ?si=lrE4cLADwKjaUCap" target="_blank" class="video-button">
+                            <i class="fa-solid fa-play"></i>
+                            <span>MCI &amp; Dementia Reality Check</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs bg-white">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">2 / 10</div>
+                <div>Alzheimer’s Association. (2025). 2025 Alzheimer’s Disease Facts and Figures.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: The Reality -->
+        <div class="slide" style="background: #FFFBF5;">
+            <div class="slide-content">
+                <div class="max-w-5xl w-full">
+                    <div class="section-label">Challenge</div>
+                    <h2 class="heading-serif text-[44px] md:text-[52px] leading-[0.92] tracking-[-2.2px] font-bold mt-1">The Reality<br>(Chaotic &amp; Underserved)</h2>
+
+                    <div class="mt-8 space-y-5">
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-users text-[#C9A227] mt-1"></i>
+                            <div class="key-point">The majority of people has <span class="font-semibold">no clear understanding</span> of the disease and available solutions.</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-search text-[#C9A227] mt-1"></i>
+                            <div class="key-point">Yet <span class="font-semibold">92%</span> of Americans with MCI are never diagnosed — until it is too late.</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-user-md text-[#C9A227] mt-1"></i>
+                            <div class="key-point">Doctors typically do not diagnose until dementia symptoms appear — which is already <span class="font-semibold">too late and irreversible</span>.</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-dollar-sign text-[#C9A227] mt-1"></i>
+                            <div class="key-point">Lifetime care costs average <span class="font-semibold">$405,000</span> per person. 70% is paid by families.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs bg-white">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">3 / 10</div>
+                <div>Alzheimer’s Association. (2025); Livingston et al. (2020). The Lancet.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: Opportunity + REDLINE ANIMATION -->
+        <div class="slide" style="background: #FFFBF5;">
+            <div class="slide-content">
+                <div class="max-w-5xl w-full">
+                    <div class="section-label">Opportunity</div>
+                    <h2 class="heading-serif text-[44px] md:text-[52px] leading-[0.92] tracking-[-2.2px] font-bold mt-1">Stoppable at the MCI Phase</h2>
+
+                    <div class="mt-6 text-[16px] leading-relaxed max-w-[52ch]">
+                        Mild Cognitive Impairment (MCI) offers a golden window. Cognitive decline is stoppable and reversible here — but not after.
+                    </div>
+
+                    <!-- REDLINE ANIMATION -->
+                    <div class="mt-7">
+                        <div class="redline-container">
+                            <!-- MCI Zone -->
+                            <div class="mci-zone">
+                                <div class="text-emerald-700 font-bold text-lg mb-1">MCI PHASE</div>
+                                <div class="text-sm font-semibold text-emerald-800 mb-2">STOPPABLE &amp; REVERSIBLE</div>
+                                
+                                <div class="mci-symbol">✓</div>
+
+                                <div class="status-text">51% of cases is reversable with timely intervention.</div>
+                            </div>
+
+                            <!-- Red Divider -->
+                            <div class="red-divider"></div>
+
+                            <!-- Dementia Zone -->
+                            <div class="dementia-zone">
+                                <div class="text-red-700 font-bold text-lg mb-1">DEMENTIA PHASE</div>
+                                <div class="text-sm font-semibold text-red-800 mb-2">IRREVERSIBLE</div>
+
+                                <div class="dementia-symbol">✗</div>
+
+                                <div class="status-text">No Cure. 7.5X higher mortality rate.</div>
+                            </div>
+                        </div>
+                        <div class="text-center text-xs font-semibold text-red-600 tracking-wider mt-1">THE POINT OF NO RETURN</div>
+                    </div>
+
+                    <div class="mt-6 text-xs text-center text-[#4B5563]">Cross the red line and the opportunity is lost forever.</div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs bg-white">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">4 / 10</div>
+                <div>Livingston et al. (2024). The Lancet Commission.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: Status Quo -->
+        <div class="slide" style="background: #FFFBF5;">
+            <div class="slide-content">
+                <div class="max-w-5xl w-full">
+                    <div class="section-label">Status Quo</div>
+                    <h2 class="heading-serif text-[42px] md:text-[50px] leading-[0.92] tracking-[-2px] font-bold mt-1">Controllable yet Uncontrolled</h2>
+
+                    <div class="mt-7 space-y-4">
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-exclamation-circle text-[#C9A227] mt-1"></i>
+                            <div class="key-point">Severe lack of minimal viable public awareness.</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-exclamation-circle text-[#C9A227] mt-1"></i>
+                            <div class="key-point">Treatment, care, and support systems are systematically flawed and insufficient.</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-exclamation-circle text-[#C9A227] mt-1"></i>
+                            <div class="key-point">Absence of any effective, efficient, and scalable solution at a global level.</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-emerald-600 mt-1"></i>
+                            <div class="key-point">Effective screening, prevention, and intervention solutions already exist.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs bg-white">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">5 / 10</div>
+                <div>National Institute on Aging and Alzheimer’s Association reports, 2023–2025.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: Solutions -->
+        <div class="slide" style="background: #FFFBF5;">
+            <div class="slide-content">
+                <div class="max-w-5xl w-full">
+                    <div class="section-label">Solutions</div>
+                    <h2 class="heading-serif text-[42px] md:text-[50px] leading-[0.92] tracking-[-2px] font-bold mt-1">Proven and in Clinical Trial</h2>
+
+                    <div class="mt-7 grid md:grid-cols-2 gap-5">
+                        <div class="frame">
+                            <div class="font-semibold text-lg mb-1">Screening</div>
+                            <div class="text-sm">MoCA Assessment — up to <span class="font-semibold">90% accuracy</span></div>
+                            <a href="https://apps.apple.com/us/app/moca-assessment/id6756805471" target="_blank" class="inline-flex items-center gap-1.5 mt-2 text-xs font-medium bg-black text-white px-3 py-1 rounded-md hover:bg-gray-800 transition-colors">
+                                <i class="fa-brands fa-apple"></i>
+                                <span class="font-semibold">MoCA Assessment</span>
+                            </a>
+                        </div>
+                        <div class="frame">
+                            <div class="font-semibold text-lg mb-2">Intervention</div>
+                            <ul class="space-y-1 text-sm">
+                                <li>
+                                    MCI Digital Suite
+                                    <div class="flex flex-wrap gap-2 mt-1">
+                                        <a href="https://apps.apple.com/us/app/memory-enhancement/id6762328155" target="_blank" class="inline-flex items-center gap-1 text-[11px] px-2.5 py-1 bg-black text-white rounded-md hover:bg-gray-800 transition-colors">
+                                            <i class="fa-brands fa-apple text-[10px]"></i> <span class="font-medium">Memory Enhancement</span>
+                                        </a>
+                                        <a href="https://apps.apple.com/us/app/motor-function/id6763461844" target="_blank" class="inline-flex items-center gap-1 text-[11px] px-2.5 py-1 bg-black text-white rounded-md hover:bg-gray-800 transition-colors">
+                                            <i class="fa-brands fa-apple text-[10px]"></i> <span class="font-medium">Motor Function</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    BCI Neuromodulation device — CFDA approved, FDA trial in progress
+                                    <div class="mt-1 text-[11px]">
+                                        <span class="text-[#4B5563]">Clinical Trial:</span> 
+                                        <a href="https://clinicaltrials.gov/study/NCT07214974" target="_blank" class="font-semibold text-[#C9A227] hover:underline">NCT07214974</a>
+                                    </div>
+                                </li>
+                                <li>• Allogenic Mesenchymal Stem Cell therapy — FDA clinical trial in progress</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 text-base font-medium">Screening — Prevention — Intervention: The Trinity MCI Interception System</div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs bg-white">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">6 / 10</div>
+                <div>NoahTech clinical and regulatory data, 2025.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: Unique Advantages -->
+        <div class="slide" style="background: #FFFBF5;">
+            <div class="slide-content">
+                <div class="max-w-5xl w-full">
+                    <div class="section-label">Advantages</div>
+                    <h2 class="heading-serif text-[42px] md:text-[50px] leading-[0.92] tracking-[-2px] font-bold mt-1">Unique Advantages</h2>
+
+                    <div class="mt-7 space-y-4">
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-check text-[#C9A227] mt-1"></i>
+                            <div class="key-point">First complete end-to-end solution ecosystem to stop MCI-to-dementia progression</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-check text-[#C9A227] mt-1"></i>
+                            <div class="key-point">Proven effective solutions plus promising innovations in active clinical trials</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-check text-[#C9A227] mt-1"></i>
+                            <div class="key-point">Rolling revenue generation that delivers immediate impact while pursuing breakthrough therapies</div>
+                        </div>
+                        <div class="frame flex items-start gap-3">
+                            <i class="fa-solid fa-check text-[#C9A227] mt-1"></i>
+                            <div class="key-point">High–mid–low three-tiered pricing for full spectrum market coverage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs bg-white">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">7 / 10</div>
+                <div>NoahTech internal strategy and pipeline documents, 2025.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: Roadmap -->
+        <div class="slide" style="background: #FFFBF5;">
+            <div class="slide-content">
+                <div class="max-w-5xl w-full">
+                    <div class="section-label">Roadmap</div>
+                    <h2 class="heading-serif text-[42px] md:text-[50px] leading-[0.92] tracking-[-2px] font-bold mt-1">Service Delivery Roadmap</h2>
+
+                    <div class="mt-7 grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <div class="frame text-center">
+                            <div class="font-semibold text-[#C9A227]">1. Awareness</div>
+                            <div class="text-xs mt-2">Free preliminary screening</div>
+                        </div>
+                        <div class="frame text-center">
+                            <div class="font-semibold text-[#C9A227]">2. Assessment</div>
+                            <div class="text-xs mt-2">Full-scale MCI assessment (paid)</div>
+                        </div>
+                        <div class="frame text-center">
+                            <div class="font-semibold text-[#C9A227]">3. Intervention</div>
+                            <div class="text-xs mt-2">~42% paid conversion</div>
+                        </div>
+                        <div class="frame text-center">
+                            <div class="font-semibold text-[#C9A227]">4. Clinical Trials</div>
+                            <div class="text-xs mt-2">FDA designation pathway</div>
+                        </div>
+                        <div class="frame text-center">
+                            <div class="font-semibold text-[#C9A227]">5. Lifetime Value</div>
+                            <div class="text-xs mt-2">42% prevalence + high stickiness</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs bg-white">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">8 / 10</div>
+                <div>NoahTech internal funnel data, 2025.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 9: Cost Structure -->
+        <div class="slide" style="background: #FFFBF5;">
+            <div class="slide-content">
+                <div class="max-w-5xl w-full">
+                    <div class="section-label">Pricing</div>
+                    <h2 class="heading-serif text-[40px] md:text-[48px] leading-[0.92] tracking-[-2px] font-bold mt-1">Cost Structure<br>(Pre-FDA Phase)</h2>
+
+                    <div class="mt-7 grid md:grid-cols-2 gap-x-6 gap-y-4 text-sm">
+                        <div class="frame">Preliminary screening: <span class="font-semibold">FREE</span></div>
+                        <div class="frame">Full-scale MCI assessment: <span class="font-semibold">$199</span> (per 6–12 months)</div>
+                        <div class="frame">Digital intervention: <span class="font-semibold">$30/person/month</span></div>
+                        <div class="frame">BCI intervention: <span class="font-semibold">$199/session</span> — <span class="font-semibold">$3,980/course</span></div>
+                        <div class="frame col-span-2 text-xs">
+                            <strong>Training &amp; Certification:</strong> Assessment $199 initial + $100/yr | Intervention $299 initial + $199/yr
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs bg-white">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">9 / 10</div>
+                <div>NoahTech pricing schedule, 2025.</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: Thank You -->
+        <div class="slide" style="background: #1A2A3A;">
+            <div class="slide-content">
+                <div class="max-w-md text-center text-white">
+                    <img src="img/logo2.png" alt="NoahTech" class="h-11 mx-auto mb-8">
+
+                    <h2 class="text-5xl font-bold tracking-tight">Thank you</h2>
+
+                    <div class="mt-10 space-y-1 text-lg">
+                        <div class="font-semibold">NoahTech, Corp.</div>
+                        <div class="text-[#E8D48A]">Managing Director: Wallace Lynch, Ph.D.</div>
+                        <div class="pt-6 text-[#E8D48A]">info@noahtech.health</div>
+                        <div>650 489 5808</div>
+                        <div class="text-sm pt-1 text-white/50">Palisades Park, NJ • Las Vegas, NV</div>
+                    </div>
+
+                    <div class="mt-8 text-xs tracking-[2px] text-white/40">WWW.NOAHTECH.HEALTH</div>
+                </div>
+            </div>
+            <div class="footer-bar px-8 text-xs border-t border-white/10" style="background: rgba(255,255,255,0.04); color: #E8D48A;">
+                <div>NoahTech, Corp.</div>
+                <div class="pagination">10 / 10</div>
+                <div>www.noahtech.health</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div onclick="prevSlide()" class="nav-arrow left hidden md:flex"><i class="fa-solid fa-chevron-left"></i></div>
+    <div onclick="nextSlide()" class="nav-arrow right hidden md:flex"><i class="fa-solid fa-chevron-right"></i></div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            if (index < 0) index = 0;
+            if (index >= totalSlides) index = totalSlides - 1;
+
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+            updatePagination();
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function updatePagination() {
+            document.querySelectorAll('.pagination').forEach(el => {
+                el.textContent = `${currentSlide + 1} / ${totalSlides}`;
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Spacebar') {
+                e.preventDefault();
+                nextSlide();
+            }
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+            if (e.key === 'Home') showSlide(0);
+            if (e.key === 'End') showSlide(totalSlides - 1);
+            if (e.key.toLowerCase() === 'f') {
+                if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+                else document.exitFullscreen();
+            }
+        });
+
+        document.getElementById('deck').addEventListener('click', function(e) {
+            if (e.clientX > window.innerWidth * 0.65) nextSlide();
+            else if (e.clientX < window.innerWidth * 0.35) prevSlide();
+        });
+
+        function initDeck() {
+            showSlide(0);
+            setTimeout(() => {
+                const hint = document.getElementById('keyboard-hint');
+                if (hint) {
+                    hint.style.transition = 'opacity 0.5s';
+                    hint.style.opacity = '0';
+                    setTimeout(() => hint.remove(), 500);
+                }
+            }, 3800);
+        }
+
+        window.onload = initDeck;
+    </script>
+</body>
+</html>
