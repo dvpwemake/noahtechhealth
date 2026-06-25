@@ -1,5 +1,5 @@
-# Noah Tech — robots.txt
-# https://www.noahtech.life/
+# Noah Tech — Cognitive & Regenerative Wellness Integrated Solutions
+# https://www.noahtech.health/
 
 User-agent: *
 Allow: /
@@ -44,4 +44,4 @@ Allow: /
 Disallow: /training.html
 Disallow: /SaMD.html
 
-Sitemap: https://www.noahtech.life/sitemap.xml
+Sitemap: https://www.noahtech.health/sitemap.xml
