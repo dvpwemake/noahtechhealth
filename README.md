@@ -2,7 +2,7 @@
 
 Official website for **NoahTech, Corp.** — a Nevada-based clinical-stage neuroscience company developing regenerative and cognitive-enhancement therapies, with a focus on Mild Cognitive Impairment (MCI) and brain-aging prevention.
 
-🌐 **Live site:** [www.noahtech.health](https://www.noahtech.health)
+🌐 **Live site:** [noahtech.health](https://noahtech.health)
 
 ---
 
@@ -81,7 +81,7 @@ Then open <http://localhost:8000> in your browser.
 
 ## Deployment
 
-The site is deployed at **www.noahtech.health**. To publish updates, upload the contents of this repository to the web server's document root (or sync via your hosting provider's standard workflow). All paths are relative, so the same files work in any subdirectory.
+The site is deployed at **noahtech.health**. To publish updates, upload the contents of this repository to the web server's document root (or sync via your hosting provider's standard workflow). All paths are relative, so the same files work in any subdirectory.
 
 ---
 
