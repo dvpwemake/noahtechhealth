@@ -6,18 +6,18 @@ Noah Tech offers an integrated cognitive and regenerative wellness program: cert
 
 ## Core pages
 
-- [Home — Cognitive & Regenerative Wellness Integrated Solutions](https://www.noahtech.health/): Company overview, integrated wellness services, medical-complex facilities, and contact details.
-- [Brain Aging Prevention — Certified MoCA](https://www.noahtech.health/cognit.html): Noah Tech is a Certified MoCA member (Rater ID USLYNWA710861409-01) providing standardized cognitive screening for early MCI detection.
-- [Clinical Trial NCT07214974](https://www.noahtech.health/trial.html): Active Pre-IND randomized, double-blind, placebo-controlled study investigating an integrated cognitive-enhancement and regenerative wellness intervention in adults aged 55–75 with MCI or age-related cognitive decline.
-- [MCI Test — MoCA Assessment App](https://www.noahtech.health/MCItest.html): Professional iOS/iPadOS/macOS application that guides clinicians through standardized MoCA administration, scoring, and reporting.
-- [Memory Enhancement — Brain Training App](https://www.noahtech.health/memen.html): Clinically-informed picture-recognition memory-training app for individuals with MCI, available in eight languages.
-- [Contact & Service Guide](https://www.noahtech.health/contact.html): Downloadable wellness service guide (PDF) and scheduling links.
-- [Support](https://www.noahtech.health/support.html): App and service support contact information.
+- [Home — Cognitive & Regenerative Wellness Integrated Solutions](https://noahtech.health/): Company overview, integrated wellness services, medical-complex facilities, and contact details.
+- [Brain Aging Prevention — Certified MoCA](https://noahtech.health/cognit.html): Noah Tech is a Certified MoCA member (Rater ID USLYNWA710861409-01) providing standardized cognitive screening for early MCI detection.
+- [Clinical Trial NCT07214974](https://noahtech.health/trial.html): Active Pre-IND randomized, double-blind, placebo-controlled study investigating an integrated cognitive-enhancement and regenerative wellness intervention in adults aged 55–75 with MCI or age-related cognitive decline.
+- [MCI Test — MoCA Assessment App](https://noahtech.health/MCItest.html): Professional iOS/iPadOS/macOS application that guides clinicians through standardized MoCA administration, scoring, and reporting.
+- [Memory Enhancement — Brain Training App](https://noahtech.health/memen.html): Clinically-informed picture-recognition memory-training app for individuals with MCI, available in eight languages.
+- [Contact & Service Guide](https://noahtech.health/contact.html): Downloadable wellness service guide (PDF) and scheduling links.
+- [Support](https://noahtech.health/support.html): App and service support contact information.
 
 ## Legal
 
-- [Privacy Policy](https://www.noahtech.health/privacy.html): HIPAA, GDPR, and CCPA disclosures covering website use, clinical-trial participation, and patient rights.
-- [Terms of Use](https://www.noahtech.health/terms.html): Nevada-governed terms, medical disclaimer, intellectual-property and arbitration provisions.
+- [Privacy Policy](https://noahtech.health/privacy.html): HIPAA, GDPR, and CCPA disclosures covering website use, clinical-trial participation, and patient rights.
+- [Terms of Use](https://noahtech.health/terms.html): Nevada-governed terms, medical disclaimer, intellectual-property and arbitration provisions.
 
 ## Contact
 
