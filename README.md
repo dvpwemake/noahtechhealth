@@ -22,8 +22,6 @@ NoahTech combines certified MoCA cognitive screening, mesenchymal stem-cell rege
 | Memory Enhancement | `memen.html` | Memory enhancement program details |
 | Clinical Trial | `trial.html` | Active trial NCT07214974 — recruiting, MCI cognitive enhancement |
 | Contact & Service Guide | `contact.html` | Service guide PDF, contact info, scheduling |
-| Sales Training | `training.html` | Sales agent training manual |
-| SaMD Project | `SaMD.html` | MCI Suite SaMD project management dashboard |
 | Support | `support.html` | App and service support contact |
 | Privacy Policy | `privacy.html` | HIPAA / GDPR / CCPA compliance |
 | Terms of Use | `terms.html` | Nevada-governed legal terms |
@@ -53,7 +51,6 @@ NoahTech combines certified MoCA cognitive screening, mesenchymal stem-cell rege
 ├── privacy.html                # Privacy policy
 ├── terms.html                  # Terms of use
 ├── training.html               # Sales agent training manual
-├── SaMD.html                   # SaMD project dashboard
 ├── style.css                   # Site-wide styles
 ├── css/                        # Vendor + responsive CSS
 ├── js/                         # jQuery, Bootstrap, plugins
