@@ -1,5 +1,6 @@
 # Noah Tech — Cognitive & Regenerative Wellness Integrated Solutions
 # https://noahtech.health/
+# AI site summary: https://noahtech.health/llms.txt
 
 User-agent: *
 Allow: /
@@ -14,12 +15,22 @@ Allow: /
 Disallow: /training.html
 Disallow: /SaMD.html
 
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
 User-agent: ClaudeBot
 Allow: /
 Disallow: /training.html
 Disallow: /SaMD.html
 
 User-agent: Claude-Web
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: anthropic-ai
 Allow: /
 Disallow: /training.html
 Disallow: /SaMD.html
@@ -40,6 +51,26 @@ Disallow: /training.html
 Disallow: /SaMD.html
 
 User-agent: Applebot-Extended
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: Bytespider
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /training.html
+Disallow: /SaMD.html
+
+User-agent: Diffbot
 Allow: /
 Disallow: /training.html
 Disallow: /SaMD.html
