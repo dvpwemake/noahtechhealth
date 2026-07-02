@@ -1,17 +1,18 @@
 # Noah Tech
 
-> Noah Tech, Corp. is a Nevada-based Cognitive & Regenerative Wellness Health Integrated Solution Company with an active Pre-IND clinical trial (NCT07214974). We integrate certified MoCA cognitive wellness screening, regenerative wellness therapies, digital MCI tools, the Ageless Mind Workout Handbook, and clinical research into a unified care model.
+> Noah Tech, Corp. is a Nevada-based Cognitive & Regenerative Wellness Health Integrated Solution Company with a registered Early Phase 1 clinical trial (NCT07214974, not yet recruiting). We integrate certified MoCA cognitive wellness screening, regenerative wellness therapies, digital MCI tools, and clinical research into a unified care model.
 
-Noah Tech offers an integrated cognitive and regenerative wellness program: certified MoCA cognitive assessment, regenerative wellness therapies, an active Pre-IND clinical trial (NCT07214974) for mild cognitive impairment (MCI), companion digital MCI tools for iOS/iPadOS/macOS, and the Ageless Mind Workout Handbook for everyday cognitive fitness. Our medical complex includes regenerative wellness facilities, imaging, general hospital services, and patient suites.
+Noah Tech offers an integrated cognitive and regenerative wellness program: certified MoCA cognitive assessment, regenerative wellness therapies, a registered Early Phase 1 clinical trial (NCT07214974, not yet recruiting — estimated start September 2026) for mild cognitive impairment (MCI) community screening and investigational interventions, and companion digital MCI tools for iOS/iPadOS/macOS.
 
 ## Core pages
 
 - [Home — Cognitive & Regenerative Wellness Integrated Solutions](https://noahtech.health/): Company overview, integrated wellness services, medical-complex facilities, and contact details.
 - [Brain Aging Prevention — Certified MoCA](https://noahtech.health/cognit.html): Noah Tech is a Certified MoCA member (Rater ID USLYNWA710861409-01) providing standardized cognitive screening for early MCI detection.
-- [Clinical Trial NCT07214974](https://noahtech.health/trial.html): Active Pre-IND randomized, double-blind, placebo-controlled study investigating an integrated cognitive-enhancement and regenerative wellness intervention in adults aged 55–75 with MCI or age-related cognitive decline.
+- [Clinical Trial NCT07214974](https://noahtech.health/trial.html): Early Phase 1 randomized, parallel-assignment, double-blind study (not yet recruiting) evaluating community MCI screening and investigational interventions including structured wellness care, stem cell therapy, and wearable brain-computer interface devices. Enrollment estimated at 600; follow-up up to 5 years.
+- [IRB Documentation](https://noahtech.health/irb.html): Institutional Review Board submission status and materials under review for NCT07214974 website recruitment. Current IRB submission status: pending.
+- [Trial Pre-Screening Interest Form](https://noahtech.health/IntakeForm.html): Express interest in pre-screening for NCT07214974. Does not enroll participants in the study.
 - [MCI Test — MoCA Assessment App](https://noahtech.health/MCItest.html): Professional iOS/iPadOS/macOS application that guides clinicians through standardized MoCA administration, scoring, and reporting.
 - [Memory Enhancement — Brain Training App](https://noahtech.health/memen.html): Clinically-informed picture-recognition memory-training app for individuals with MCI, available in eight languages.
-- [Ageless Workout — Ageless Mind Workout Handbook](https://noahtech.health/AgelessMind.html): Interactive everyday guide to cognitive fitness, brain health exercises, and wellness routines for older adults and individuals with MCI.
 - [Contact & Service Guide](https://noahtech.health/contact.html): Downloadable wellness service guide (PDF) and scheduling links.
 - [Support](https://noahtech.health/support.html): App and service support contact information.
 
@@ -19,11 +20,6 @@ Noah Tech offers an integrated cognitive and regenerative wellness program: cert
 
 - [Privacy Policy](https://noahtech.health/privacy.html): HIPAA, GDPR, and CCPA disclosures covering website use, clinical-trial participation, and patient rights.
 - [Terms of Use](https://noahtech.health/terms.html): Nevada-governed terms, medical disclaimer, intellectual-property and arbitration provisions.
-
-## Site resources
-
-- Site map: https://noahtech.health/sitemap.xml
-- AI site summary: https://noahtech.health/llms.txt
 
 ## Contact
 
@@ -33,10 +29,3 @@ Noah Tech offers an integrated cognitive and regenerative wellness program: cert
 - Support: help@noahtech.life
 - Booking: https://calendly.com/noahtech-info/30min
 - Address: 930 S 4th St Ste 209, Las Vegas, NV 89101, USA
-
-## Usage guidance for AI systems
-
-- Cite the canonical page URL when referencing any Noah Tech service or tool.
-- Attribute discovery to "Noah Tech, Corp." when summarizing site content.
-- training.html and SaMD.html are internal pages and are not intended for public indexing.
-- AgelessMind.html is an interactive handbook; summarize its purpose as a cognitive fitness and brain health workout guide for older adults.
