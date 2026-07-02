@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Patient Intake Form | Noah Tech</title>
+<meta name="description" content="Confidential patient intake and case evaluation for Noah Tech integrated cognitive wellness, regenerative health, and clinical trial programs.">
+<meta name="keywords" content="Noah Tech patient intake, case evaluation, cognitive wellness, regenerative wellness, MCI, clinical trial">
+<meta name="author" content="Noah Tech, Corp.">
+<link rel="canonical" href="https://noahtech.health/NoahTech%20Patient%20Intake%20Form.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Noah Tech">
+<meta property="og:url" content="https://noahtech.health/NoahTech%20Patient%20Intake%20Form.html">
+<meta property="og:title" content="Patient Intake Form | Noah Tech">
+<meta property="og:description" content="Submit a confidential case evaluation for integrated cognitive and regenerative wellness programs.">
+<meta property="og:image" content="https://noahtech.health/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Patient Intake Form | Noah Tech">
+<meta name="twitter:description" content="Confidential patient intake for Noah Tech wellness programs.">
+<meta name="twitter:image" content="https://noahtech.health/img/og-image.jpg">
+
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/icofont.css">
+<link rel="stylesheet" href="css/slicknav.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/overrides.css">
+
+<style>
+.intake-hero {
+    background: radial-gradient(1000px 600px at 80% -20%, #5aa0ff33, transparent),
+                linear-gradient(180deg, #fff 0%, #eef5ff 100%);
+    padding: 90px 0 50px;
+    text-align: center;
+}
+.intake-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #e7f0ff;
+    border: 1px solid #cfe0ff;
+    color: #0b2a69;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+.intake-hero h1 {
+    color: #0b2a69;
+    font-weight: 700;
+    font-size: clamp(1.75rem, 4vw, 2.6rem);
+    margin-bottom: 16px;
+}
+.intake-hero p {
+    color: #475569;
+    font-size: 1.05rem;
+    max-width: 760px;
+    margin: 0 auto 24px;
+    line-height: 1.75;
+}
+.intake-notice {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 14px 18px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 12px;
+    color: #065f46;
+    font-size: 14px;
+    text-align: left;
+}
+.intake-section-wrap {
+    padding: 50px 0 80px;
+}
+.intake-form-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+    overflow: hidden;
+}
+.intake-block {
+    padding: 28px 32px;
+    border-bottom: 1px solid #e2e8f0;
+}
+.intake-block:last-of-type { border-bottom: none; }
+.intake-block h2 {
+    color: #0b2a69;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.intake-block h2 i {
+    color: #1a76d1;
+    font-size: 1.1rem;
+}
+.intake-block .block-desc {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+.intake-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 20px;
+}
+.intake-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.intake-field { display: flex; flex-direction: column; gap: 6px; }
+.intake-field.full { grid-column: 1 / -1; }
+.intake-field label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1e293b;
+    margin: 0;
+}
+.intake-field label .req { color: #dc2626; }
+.intake-field input[type="text"],
+.intake-field input[type="email"],
+.intake-field input[type="tel"],
+.intake-field input[type="date"],
+.intake-field input[type="number"],
+.intake-field input[type="file"],
+.intake-field select,
+.intake-field textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 14px;
+    color: #1e293b;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.intake-field input:focus,
+.intake-field select:focus,
+.intake-field textarea:focus {
+    outline: none;
+    border-color: #1a76d1;
+    box-shadow: 0 0 0 3px rgba(26, 118, 209, 0.12);
+}
+.intake-field textarea { min-height: 96px; resize: vertical; }
+.intake-radio-group,
+.intake-check-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    padding-top: 4px;
+}
+.intake-radio-group label,
+.intake-check-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.intake-radio-group input,
+.intake-check-group input {
+    width: 16px;
+    height: 16px;
+    accent-color: #1a76d1;
+}
+.intake-interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 16px;
+}
+.intake-conditional { display: none; margin-top: 4px; }
+.intake-conditional.show { display: flex; flex-direction: column; gap: 6px; }
+.intake-file-hint { font-size: 12px; color: #64748b; margin: 4px 0 0; }
+.intake-consent {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #475569;
+}
+.intake-consent input { margin-top: 4px; flex-shrink: 0; accent-color: #1a76d1; }
+.intake-consent a { color: #1a76d1; }
+.intake-actions {
+    padding: 28px 32px;
+    background: #f8fafc;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.intake-submit-note {
+    font-size: 13px;
+    color: #64748b;
+    max-width: 420px;
+    margin: 0;
+    line-height: 1.6;
+}
+.btn-primary-nt {
+    display: inline-block;
+    background: #0b2a69;
+    color: #fff;
+    padding: 14px 34px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+.btn-primary-nt:hover:not(:disabled) {
+    background: #0a2356;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(11, 42, 105, 0.25);
+}
+.btn-primary-nt:disabled { opacity: 0.65; cursor: not-allowed; }
+.intake-alert {
+    display: none;
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+.intake-alert.show { display: block; }
+.intake-alert.success { background: #ecfdf5; border: 1px solid #6ee7b7; color: #059669; }
+.intake-alert.error { background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; }
+.intake-field-error { font-size: 12px; color: #dc2626; display: none; }
+.intake-field.invalid input,
+.intake-field.invalid select,
+.intake-field.invalid textarea { border-color: #dc2626; }
+.intake-field.invalid .intake-field-error { display: block; }
+@media (max-width: 767px) {
+    .intake-block, .intake-actions { padding: 22px 18px; }
+    .intake-grid, .intake-grid-3, .intake-interest-grid { grid-template-columns: 1fr; }
+    .intake-actions { flex-direction: column; align-items: stretch; }
+    .btn-primary-nt { width: 100%; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="preloader"><div class="loader"><div class="loader-outter"></div><div class="loader-inner"></div></div></div>
+
+<header class="header">
+    <div class="header-inner"><div class="container"><div class="inner"><div class="row">
+        <div class="col-lg-3 col-md-3 col-12">
+            <div class="logo"><a href="index.html"><img src="img/logo.jpg" alt="Noah Tech"></a></div>
+            <div class="mobile-nav"></div>
+        </div>
+        <div class="col-lg-7 col-md-9 col-12"><div class="main-menu">
+            <nav class="navigation" aria-label="Primary navigation">
+                <ul class="nav menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cognit.html">Brain Aging Prevention</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" onclick="return false;">MCI Tools</a>
+                        <ul class="dropdown-menu-custom">
+                            <li><a href="MCItest.html">MoCA Assessment</a></li>
+                            <li><a href="memen.html">Memory Enhancement</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="trial.html">Clinical Trial</a></li>
+                    <li class="active"><a href="NoahTech Patient Intake Form.html">Patient Intake</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div></div>
+        <div class="col-lg-2 col-12"><div class="get-quote"><a href="https://calendly.com/noahtech-info/30min" class="btn">Book Appointment</a></div></div>
+    </div></div></div></div>
+</header>
+
+<section class="intake-hero">
+    <div class="container">
+        <div class="intake-pill"><i class="icofont-ui-user"></i> Confidential Case Evaluation</div>
+        <h1>Patient Intake Form</h1>
+        <p>
+            Thank you for your interest in Noah Tech. Complete this application so our medical team can review your case
+            and determine eligibility for cognitive wellness, regenerative health, or our Pre-IND clinical trial (NCT07214974).
+        </p>
+        <div class="intake-notice">
+            Your information is confidential and handled with discretion. Submissions are reviewed within 72 hours.
+            We do not share your data with third parties or use it for unsolicited marketing.
+        </div>
+    </div>
+</section>
+
+<section class="intake-section-wrap">
+    <div class="container">
+        <div class="row"><div class="col-lg-12"><div class="section-title text-center">
+            <h2>Confidential Candidate Application</h2>
+            <img src="img/section-img.png" alt="" loading="lazy" decoding="async">
+            <p>Fields marked with <span style="color:#dc2626">*</span> are required.</p>
+        </div></div></div>
+
+        <div class="row"><div class="col-lg-12">
+            <div id="formAlert" class="intake-alert" role="alert"></div>
+
+            <form id="intakeForm" class="intake-form-card" novalidate>
+                <div class="intake-block">
+                    <h2><i class="icofont-user-alt-3"></i> Personal Information</h2>
+                    <p class="block-desc">Tell us how to reach you and basic demographic details.</p>
+                    <div class="intake-grid">
+                        <div class="intake-field">
+                            <label for="fullName">Full Name <span class="req">*</span></label>
+                            <input type="text" id="fullName" name="full_name" required autocomplete="name">
+                            <span class="intake-field-error">Required</span>
+                        </div>
+                        <div class="intake-field">
+                            <label for="dob">Date of Birth <span class="req">*</span></label>
+                            <input type="date" id="dob" name="date_of_birth" required>
+                            <span class="intake-field-error">Required</span>
+                        </div>
+                        <div class="intake-field">
+                            <label for="email">Email <span class="req">*</span></label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                            <span class="intake-field-error">Valid email required</span>
+                        </div>
+                        <div class="intake-field">
+                            <label for="phone">Phone Number <span class="req">*</span></label>
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                            <span class="intake-field-error">Required</span>
+                        </div>
+                        <div class="intake-field">
+                            <label for="contactTime">Best Time / Day to Contact</label>
+                            <input type="text" id="contactTime" name="best_contact_time" placeholder="e.g. Weekdays after 2pm PST">
+                        </div>
+                        <div class="intake-field">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="">Select</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Non-binary</option>
+                                <option>Prefer not to say</option>
+                            </select>
+                        </div>
+                        <div class="intake-field">
+                            <label for="marital">Marital Status</label>
+                            <input type="text" id="marital" name="marital_status">
+                        </div>
+                        <div class="intake-field">
+                            <label for="religion">Religion (optional)</label>
+                            <input type="text" id="religion" name="religion">
+                        </div>
+                        <div class="intake-field">
+                            <label for="weight">Weight</label>
+                            <input type="text" id="weight" name="weight" placeholder="e.g. 170 lbs">
+                        </div>
+                        <div class="intake-field">
+                            <label for="height">Height</label>
+                            <input type="text" id="height" name="height" placeholder="e.g. 5'10&quot;">
+                        </div>
+                        <div class="intake-field">
+                            <label for="birthPlace">Place of Birth</label>
+                            <input type="text" id="birthPlace" name="place_of_birth">
+                        </div>
+                        <div class="intake-field">
+                            <label for="residence">Residence (City, Country) <span class="req">*</span></label>
+                            <input type="text" id="residence" name="residence" required>
+                            <span class="intake-field-error">Required</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intake-block">
+                    <h2><i class="icofont-heart-beat"></i> Areas of Interest</h2>
+                    <p class="block-desc">Select the Noah Tech programs you would like evaluated.</p>
+                    <div class="intake-interest-grid intake-check-group">
+                        <label><input type="checkbox" name="interest" value="Cognitive Wellness / MCI Prevention"> Cognitive Wellness / MCI Prevention</label>
+                        <label><input type="checkbox" name="interest" value="MoCA Cognitive Assessment"> MoCA Cognitive Assessment</label>
+                        <label><input type="checkbox" name="interest" value="Regenerative Wellness / Stem Cell Therapy"> Regenerative Wellness / Stem Cell Therapy</label>
+                        <label><input type="checkbox" name="interest" value="Clinical Trial NCT07214974"> Clinical Trial (NCT07214974)</label>
+                        <label><input type="checkbox" name="interest" value="Memory Enhancement Program"> Memory Enhancement Program</label>
+                        <label><input type="checkbox" name="interest" value="Integrated VIP Treatment Package"> Integrated VIP Treatment Package</label>
+                    </div>
+                </div>
+
+                <div class="intake-block">
+                    <h2><i class="icofont-pulse"></i> Health &amp; Lifestyle</h2>
+                    <p class="block-desc">Help us understand your background and daily habits.</p>
+                    <div class="intake-grid">
+                        <div class="intake-field full">
+                            <label>Do you smoke?</label>
+                            <div class="intake-radio-group">
+                                <label><input type="radio" name="smoke" value="Yes" data-toggle="smokeDetail"> Yes</label>
+                                <label><input type="radio" name="smoke" value="No" data-toggle="smokeDetail"> No</label>
+                            </div>
+                            <div id="smokeDetail" class="intake-conditional">
+                                <label for="smokeAmount">Amount / Frequency</label>
+                                <input type="text" id="smokeAmount" name="smoke_details">
+                            </div>
+                        </div>
+                        <div class="intake-field full">
+                            <label>Do you drink alcohol?</label>
+                            <div class="intake-radio-group">
+                                <label><input type="radio" name="drink" value="Yes" data-toggle="drinkDetail"> Yes</label>
+                                <label><input type="radio" name="drink" value="No" data-toggle="drinkDetail"> No</label>
+                            </div>
+                            <div id="drinkDetail" class="intake-conditional">
+                                <label for="drinkAmount">Drinks per week</label>
+                                <input type="text" id="drinkAmount" name="drink_details">
+                            </div>
+                        </div>
+                        <div class="intake-field full">
+                            <label>Do you use recreational drugs?</label>
+                            <div class="intake-radio-group">
+                                <label><input type="radio" name="drugs" value="Yes" data-toggle="drugsDetail"> Yes</label>
+                                <label><input type="radio" name="drugs" value="No" data-toggle="drugsDetail"> No</label>
+                            </div>
+                            <div id="drugsDetail" class="intake-conditional">
+                                <label for="drugsDetailInput">What / Frequency</label>
+                                <input type="text" id="drugsDetailInput" name="drugs_details">
+                            </div>
+                        </div>
+                        <div class="intake-field full">
+                            <label>Do you practice sports or regular exercise?</label>
+                            <div class="intake-radio-group">
+                                <label><input type="radio" name="sport" value="Yes" data-toggle="sportDetail"> Yes</label>
+                                <label><input type="radio" name="sport" value="No" data-toggle="sportDetail"> No</label>
+                            </div>
+                            <div id="sportDetail" class="intake-conditional">
+                                <label for="sportDetailInput">Type / Frequency</label>
+                                <input type="text" id="sportDetailInput" name="sport_details">
+                            </div>
+                        </div>
+                        <div class="intake-field full">
+                            <label>Do you have allergies?</label>
+                            <div class="intake-radio-group">
+                                <label><input type="radio" name="allergies" value="Yes" data-toggle="allergyDetail"> Yes</label>
+                                <label><input type="radio" name="allergies" value="No" data-toggle="allergyDetail"> No</label>
+                            </div>
+                            <div id="allergyDetail" class="intake-conditional">
+                                <label for="allergyType">Type</label>
+                                <input type="text" id="allergyType" name="allergy_details">
+                            </div>
+                        </div>
+                        <div class="intake-field full">
+                            <label>Allergies to any medicine?</label>
+                            <div class="intake-radio-group">
+                                <label><input type="radio" name="med_allergies" value="Yes" data-toggle="medAllergyDetail"> Yes</label>
+                                <label><input type="radio" name="med_allergies" value="No" data-toggle="medAllergyDetail"> No</label>
+                            </div>
+                            <div id="medAllergyDetail" class="intake-conditional">
+                                <label for="medAllergyType">Which medicines</label>
+                                <input type="text" id="medAllergyType" name="med_allergy_details">
+                            </div>
+                        </div>
+                        <div class="intake-field full">
+                            <label>Special diet?</label>
+                            <div class="intake-radio-group">
+                                <label><input type="radio" name="diet" value="Yes" data-toggle="dietDetail"> Yes</label>
+                                <label><input type="radio" name="diet" value="No" data-toggle="dietDetail"> No</label>
+                            </div>
+                            <div id="dietDetail" class="intake-conditional">
+                                <label for="dietExplain">Explain</label>
+                                <input type="text" id="dietExplain" name="diet_details">
+                            </div>
+                        </div>
+                        <div class="intake-field full">
+                            <label>Cancer in the last 5 years?</label>
+                            <div class="intake-radio-group">
+                                <label><input type="radio" name="cancer" value="Yes" data-toggle="cancerDetail"> Yes</label>
+                                <label><input type="radio" name="cancer" value="No" data-toggle="cancerDetail"> No</label>
+                            </div>
+                            <div id="cancerDetail" class="intake-conditional">
+                                <label for="cancerDetailInput">Type / Date / Treatment</label>
+                                <input type="text" id="cancerDetailInput" name="cancer_details">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intake-block">
+                    <h2><i class="icofont-medical-sign"></i> Current Condition</h2>
+                    <p class="block-desc">Describe your primary diagnosis, symptoms, and available records.</p>
+                    <div class="intake-grid">
+                        <div class="intake-field full">
+                            <label for="diagnosis">Primary Diagnosis / Reason for Visit <span class="req">*</span></label>
+                            <input type="text" id="diagnosis" name="diagnosis" required placeholder="e.g. Mild Cognitive Impairment, knee osteoarthritis">
+                            <span class="intake-field-error">Required</span>
+                        </div>
+                        <div class="intake-field">
+                            <label for="symptomDate">First Symptom Date</label>
+                            <input type="date" id="symptomDate" name="first_symptom_date">
+                        </div>
+                        <div class="intake-field">
+                            <label for="diagnosisDate">Diagnosis Date</label>
+                            <input type="date" id="diagnosisDate" name="diagnosis_date">
+                        </div>
+                        <div class="intake-field full">
+                            <label for="initialSymptoms">Initial Symptoms</label>
+                            <textarea id="initialSymptoms" name="initial_symptoms"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="currentSymptoms">Current Symptoms</label>
+                            <textarea id="currentSymptoms" name="current_symptoms"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="labStudies">Available Lab Studies</label>
+                            <textarea id="labStudies" name="lab_studies"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="imaging">Available Imaging / X-Rays / MRI</label>
+                            <textarea id="imaging" name="imaging"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="pastTreatments">Treatments Received in the Past</label>
+                            <textarea id="pastTreatments" name="past_treatments"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="otherIllness">Other Illnesses Present</label>
+                            <textarea id="otherIllness" name="other_illness"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="currentMeds">Current Medication</label>
+                            <textarea id="currentMeds" name="current_medication"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="surgeries">Previous Surgeries (cause and date)</label>
+                            <textarea id="surgeries" name="previous_surgeries"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="specialReq">Special Requirements</label>
+                            <textarea id="specialReq" name="special_requirements" placeholder="Wheelchair, transportation, communication needs, etc."></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="comments">Additional Comments / Questions</label>
+                            <textarea id="comments" name="additional_comments"></textarea>
+                        </div>
+                        <div class="intake-field full">
+                            <label for="records">Upload Medical Records (optional)</label>
+                            <input type="file" id="records" name="medical_records" accept=".pdf,.png,.jpg,.jpeg,.gif" multiple>
+                            <p class="intake-file-hint">Accepted: PDF, PNG, JPG, GIF. Max 10 MB per file.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intake-block" id="femaleSection">
+                    <h2><i class="icofont-female"></i> For Female Patients (optional)</h2>
+                    <p class="block-desc">Complete if applicable.</p>
+                    <div class="intake-grid intake-grid-3">
+                        <div class="intake-field">
+                            <label for="pregnancies">Number of Pregnancies</label>
+                            <input type="number" id="pregnancies" name="pregnancies" min="0">
+                        </div>
+                        <div class="intake-field">
+                            <label for="vaginal">Vaginal Births</label>
+                            <input type="number" id="vaginal" name="vaginal_births" min="0">
+                        </div>
+                        <div class="intake-field">
+                            <label for="csections">C-Sections</label>
+                            <input type="number" id="csections" name="c_sections" min="0">
+                        </div>
+                        <div class="intake-field">
+                            <label for="abortions">Abortions</label>
+                            <input type="number" id="abortions" name="abortions" min="0">
+                        </div>
+                        <div class="intake-field">
+                            <label for="menopause">Menopause</label>
+                            <input type="text" id="menopause" name="menopause">
+                        </div>
+                        <div class="intake-field">
+                            <label for="hormone">Hormone Therapy</label>
+                            <input type="text" id="hormone" name="hormone_therapy">
+                        </div>
+                        <div class="intake-field full">
+                            <label for="femaleComments">Additional Comments</label>
+                            <textarea id="femaleComments" name="female_comments"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intake-block">
+                    <h2><i class="icofont-search-user"></i> How Did You Hear About Us?</h2>
+                    <div class="intake-field full">
+                        <input type="text" id="referral" name="referral_source" placeholder="Referral, website, physician, social media, etc.">
+                    </div>
+                </div>
+
+                <div class="intake-block">
+                    <div class="intake-consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">
+                            I consent to Noah Tech, Corp. collecting and using my information to evaluate my case and contact me
+                            regarding treatment options, in accordance with the
+                            <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and
+                            <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a>.
+                            My submission will be sent to <strong>info@noahtech.life</strong> for review. <span class="req">*</span>
+                        </label>
+                    </div>
+                    <span class="intake-field-error" id="consentError" style="display:none; margin-top:8px;">Consent is required to submit.</span>
+                </div>
+
+                <div class="intake-actions">
+                    <p class="intake-submit-note">
+                        After approval, we may request recent blood work (CBC with platelets, PT, and PTT) before your visit
+                        to our 5-star medical complex.
+                    </p>
+                    <button type="submit" class="btn-primary-nt" id="submitBtn">Submit Intake Form</button>
+                </div>
+            </form>
+        </div></div>
+    </div>
+</section>
+
+<section class="call-action overlay" data-stellar-background-ratio="0.5">
+    <div class="container"><div class="row"><div class="col-lg-12"><div class="content">
+        <h2>Prefer to Talk First?</h2>
+        <p>Schedule a complimentary consultation with our team before submitting your intake form.</p>
+        <div class="button"><a href="https://calendly.com/noahtech-info/30min" class="btn" target="_blank" rel="noopener">Schedule a Call</a></div>
+    </div></div></div></div>
+</section>
+
+<footer id="footer" class="footer">
+    <div class="copyright"><div class="container"><div class="row"><div class="col-lg-12">
+        <div class="copyright-content">
+            <p>Copyright 2024–<span id="copyright-year"></span> | All Rights Reserved by
+                <a href="https://noahtech.health">Noah Tech, Corp.</a> &bull;
+                <a href="privacy.html">Privacy Policy</a> &bull;
+                <a href="terms.html">Terms of Use</a> &bull; <a href="support.html">Support</a>
+            </p>
+        </div>
+    </div></div></div></div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+(function () {
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@noahtech.life';
+    const form = document.getElementById('intakeForm');
+    const alertBox = document.getElementById('formAlert');
+    const submitBtn = document.getElementById('submitBtn');
+
+    document.querySelectorAll('[data-toggle]').forEach(radio => {
+        radio.addEventListener('change', () => {
+            const target = document.getElementById(radio.dataset.toggle);
+            if (!target) return;
+            const group = document.querySelectorAll('input[name="' + radio.name + '"]');
+            const yesSelected = Array.from(group).some(r => r.checked && r.value === 'Yes');
+            target.classList.toggle('show', yesSelected);
+        });
+    });
+
+    function showAlert(message, type) {
+        alertBox.textContent = message;
+        alertBox.className = 'intake-alert show ' + type;
+        alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function validateForm() {
+        let valid = true;
+        form.querySelectorAll('[required]').forEach(el => {
+            const field = el.closest('.intake-field');
+            let ok = true;
+            if (el.type === 'checkbox') {
+                ok = el.checked;
+                document.getElementById('consentError').style.display = ok ? 'none' : 'block';
+            } else if (el.type === 'email') {
+                ok = el.value.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+            } else {
+                ok = el.value.trim().length > 0;
+            }
+            if (field) field.classList.toggle('invalid', !ok);
+            if (!ok) valid = false;
+        });
+        return valid;
+    }
+
+    function collectFormData() {
+        const data = new FormData(form);
+        const payload = new FormData();
+        payload.append('_subject', 'New NoahTech Patient Intake Form');
+        payload.append('_template', 'table');
+        payload.append('_captcha', 'true');
+
+        const interests = [];
+        form.querySelectorAll('input[name="interest"]:checked').forEach(cb => interests.push(cb.value));
+        if (interests.length) payload.append('areas_of_interest', interests.join(', '));
+
+        for (const [key, value] of data.entries()) {
+            if (key === 'interest' || key === 'medical_records') continue;
+            if (value instanceof File) continue;
+            payload.append(key, value);
+        }
+
+        const files = document.getElementById('records').files;
+        for (let i = 0; i < files.length; i++) {
+            if (files[i].size > 10 * 1024 * 1024) {
+                throw new Error('File "' + files[i].name + '" exceeds 10 MB limit.');
+            }
+            payload.append('medical_records', files[i]);
+        }
+        return payload;
+    }
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        if (!validateForm()) {
+            showAlert('Please complete all required fields marked with *.', 'error');
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        try {
+            const res = await fetch(FORM_ENDPOINT, {
+                method: 'POST',
+                headers: { Accept: 'application/json' },
+                body: collectFormData()
+            });
+            const result = await res.json().catch(() => ({}));
+            if (!res.ok) {
+                throw new Error(result.message || 'Submission failed. Please email info@noahtech.life directly.');
+            }
+            showAlert('Thank you! Your intake form has been submitted. Our medical team will review your case and respond within 72 hours.', 'success');
+            form.reset();
+            document.querySelectorAll('.intake-conditional').forEach(el => el.classList.remove('show'));
+            document.querySelectorAll('.intake-field.invalid').forEach(el => el.classList.remove('invalid'));
+        } catch (err) {
+            showAlert(err.message || 'Unable to send form. Please email info@noahtech.life directly.', 'error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit Intake Form';
+        }
+    });
+})();
+</script>
+</body>
+</html>
